@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="js/angular.min.js"></script>
+    <script src="js/app-week1.js"></script>
+    <style>body { font-size: 1.3em; }</style>
+    <title>Lunch Counter</title>
+  </head>
+  <body ng-app="LunchCounter">
+    <h1>Lunch Counter</h1>
+    <div ng-controller="LunchCounterController">
+      <div>
+        Enter Comma Separated List:
+        <input type="text" ng-model="lunchList"><br>
+        <button ng-click="listProcessor();">Check If Too Much</button>
+        <div ng-model="feedback"><br>
+          {{feedback}}
+        </div>
+      </div>
+  </body>
+</html>
