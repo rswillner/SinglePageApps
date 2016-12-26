@@ -1,19 +1,28 @@
 h1 {
   margin-bottom: 30px;
 }
+
 input[type="text"] {
   width: 200px;
   float: left;
 }
-.list {
+
+li {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.list, .error {
   float: left;
   margin-left: 10px;
   clear: both;
 }
+
 .narrow-button {
   float: left;
   margin-left: 10px;
 }
+
 .loader {
   display: none;
   margin-left: 5px;
@@ -29,12 +38,14 @@ input[type="text"] {
   -webkit-animation: load8 1.1s infinite linear;
   animation: load8 1.1s infinite linear;
 }
+
 .loader,
 .loader:after {
   border-radius: 50%;
   width: 3em;
   height: 3em;
 }
+
 @-webkit-keyframes load8 {
   0% {
     -webkit-transform: rotate(0deg);

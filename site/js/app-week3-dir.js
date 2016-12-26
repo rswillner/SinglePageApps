@@ -12,7 +12,8 @@
       templateUrl:'foundItems-dir.html',
       scope: {
         items: '<items',
-        onRemove: '&'
+        onRemove: '&',
+        found: '<found'
       }
     };
     return ddo;
@@ -23,12 +24,24 @@
     var menu = this;
     menu.foundItems = [];
     menu.search_term = '';
+    menu.found = true;
 
     menu.getMatchingItems = function(){
+      if (menu.search_term === ''){
+        menu.found = false;
+        menu.foundItems = [];
+        return;
+      } else {
       MenuSearchService.getMatchedMenuItems(menu.search_term).then(
         function(results){
           menu.foundItems = results;
+          if (menu.foundItems.length < 1){
+            menu.found = false;
+          } else {
+            menu.found = true;
+          }
         });
+      }
     };
 
     menu.removeItem = function(itemIndex){
