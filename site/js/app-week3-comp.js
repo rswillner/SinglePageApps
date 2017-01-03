@@ -6,7 +6,7 @@
   .controller('NarrowItDownController', NarrowItDownController)
   .service('MenuSearchService', MenuSearchService)
   .component('foundItems', {
-    templateUrl: 'foundItems-comp.html',
+    templateUrl: 'templates/foundItems-comp.html',
     controller: FoundItemsComponentController,
     bindings: {
       items: '<',
@@ -16,7 +16,7 @@
 
   function FoundItemsComponentController(){
     var $ctrl = this;
-    
+
     $ctrl.remove = function(myIndex){
       $ctrl.onRemove({index: myIndex});
     };

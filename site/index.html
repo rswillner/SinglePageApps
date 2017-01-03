@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>On-line Menu</title>
+  </head>
+  <body ng-app='MenuApp'>
+    <h1>Welcome to the On-line Menu Application</h1>
+
+    <ui-view></ui-view>
+
+    <!-- Libraries -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+
+    <!-- Modules -->
+    <script src="js/menudata/data.module.js"></script>
+    <script src="js/menuapp/menuapp.module.js"></script>
+
+    <!-- Routes -->
+    <script src="js/menuapp/routes.js"></script>
+
+    <!-- 'ShoppingList' module artifacts -->
+
+    <script src="js/menuapp/categories.component.js"></script>
+    <script src="js/menuapp/items.component.js"></script>
+    <script src="js/menudata/categories.controller.js"></script>
+    <script src="js/menudata/items.controller.js"></script>
+    <script src="js/menudata/menudata.service.js"></script>
+
+  </body>
+</html>

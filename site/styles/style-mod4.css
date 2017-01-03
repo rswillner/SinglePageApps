@@ -1,0 +1,57 @@
+body { background: #222; }
+nav#tab-navigation { 
+  padding-top: 2rem;
+  padding-left: 2rem; 
+  overflow: hidden; 
+  height: 4rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+nav#tab-navigation a { 
+  font-family: Avenir, Helvetica, sans-serif;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.8rem 2.6rem 2rem 2.6rem;
+  border: 1px solid #777;
+  border-radius: 5px 5px 0 0;
+  background: -webkit-linear-gradient(#dfc891, #776c51);
+  background: linear-gradient(#dfc891, #776c51);
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  letter-spacing: 0.15rem; 
+  text-shadow: 0 1px 0 #000;
+  font-size: 1.4rem;
+  -webkit-transition: 0.2s transform linear;
+  transition: 0.2s transform linear;
+}
+nav#tab-navigation a:nth-child(n+1) {
+  margin-left: -1.2rem;
+  position: relative;
+  z-index: 2;
+}
+a#forefront { 
+  position: relative;
+  top: -0.2rem;
+  z-index: 2; 
+}
+nav#tab-navigation a:hover, nav#tab-navigation a:focus {    
+  -webkit-transform: translateY(-.4rem);    
+          transform: translateY(-.4rem); 
+}
+@media screen and (max-width: 800px) {
+  nav#tab-navigation { height: 3rem;
+  }
+  nav#tab-navigation a { 
+  font-size: 1.1rem;
+    padding: 0.8rem 1.4rem 2rem;
+  }
+}
+@media screen and (max-width: 500px) { nav#tab-navigation { height: auto; }
+nav#tab-navigation a { 
+  display: block;
+  margin-top: -1rem; 
+}
+}
