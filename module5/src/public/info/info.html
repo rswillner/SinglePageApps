@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+
+      <h2>Profile Information</h2>
+      <form name="info">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input id="first-name" class="form-control" type="text" readonly="readonly"
+              name="firstName" ng-model="infoCtrl.firstName">
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input id="last-name" class="form-control" type="text" readonly="readonly"
+              name="lastName" ng-model="infoCtrl.lastName">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" class="form-control" type="email" readonly="readonly"
+              name="email" ng-model="infoCtrl.email">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input id="phone" class="form-control" type="number" readonly="readonly"
+              name="phone" ng-model="infoCtrl.phone">
+        </div>
+
+        <div class="form-group">
+          <label for="fav">Favorite Dish (Optional)</label>
+          <input id="fav" class="form-control" type="text"
+              name="favDish" ng-model="infoCtrl.favDish">
+        </div>
+        <div class="form-group">
+          <span ng-if="!(infoCtrl.savedFlag)">
+            Not signed up yet. <a ui-sref="public.signup"><span>Sign up now!</span></a>
+          </span>
+        </div>
+      </form>
+
+    </div>  <!-- col div  -->
+  </div>  <!-- row div  -->
+  <div id="fav-dish-info" ng-if="infoCtrl.savedFlag">
+    <img class="img-responsive" width="250" height="150" ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.dishShortName}}.jpg"
+        alt="{{infoCtrl.dishName}}">
+    <h3 class="menu-item-title">{{infoCtrl.dishName}}</h3>
+    <p class="menu-item-details">{{infoCtrl.dishDescription}}</p>
+  </div>
+</div>  <!-- container div  -->

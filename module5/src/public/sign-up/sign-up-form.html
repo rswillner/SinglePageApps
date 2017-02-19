@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+
+      <h2>Sign Up Form</h2>
+      <form name="signUp" novalidate>
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input id="first-name" class="form-control" type="text" required
+              name="firstName" ng-model="ctrl.firstName">
+          <span ng-if="signUp.firstName.$error.required &&
+              signUp.firstName.$touched">
+            First name is required
+          </span>
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input id="last-name" class="form-control" type="text" required
+              name="lastName" ng-model="ctrl.lastName">
+          <span ng-if="signUp.lastName.$error.required &&
+              signUp.lastName.$touched">
+            Last name is required
+          </span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" class="form-control" type="email" required
+              name="email" ng-model="ctrl.email">
+          <span ng-if="signUp.email.$error.required &&
+              signUp.email.$touched">
+            email address is required
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input id="phone" class="form-control" type="number" required
+              name="phone" ng-model="ctrl.phone" min-length="10">
+          <span ng-if="signUp.phone.$error.required &&
+              signUp.phone.$touched">
+            Phone number is required
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="fav">Favorite Dish (Optional)</label>
+          <input id="fav" class="form-control" type="text"
+              name="favDish" ng-model="ctrl.favDish" max-length="4">
+          <span ng-if="!ctrl.favDishFlag">
+            No such menu number exists
+          </span>
+        </div>
+
+        <button class="btn btn-default" type="submit"
+            ng-disabled="signUp.$invalid" ng-click="ctrl.signUp();">
+              Submit</button>
+        <div class="form-group">
+          <span ng-if="ctrl.infoSavedFlag == true">
+            Your information has been saved
+          </span>
+        </div>
+      </form>
+
+    </div>  <!-- col div  -->
+  </div>  <!-- row div  -->
+</div>  <!-- container div  -->
